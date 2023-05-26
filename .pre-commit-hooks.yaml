@@ -1,7 +1,7 @@
 -   id: kustomize
     name: kustomize (via docker)
     description: kustomize provided by docker
-    entry: kustomize build
+    entry: 'for item in $KUSTOMIZE_DIRS; do kustomize build $item; done'
     language: docker
     args: [overlay/production-us]
     always_run: true
